@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONIC PEOPLE - Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="LOGO.jpg" alt="IRONIC PEOPLE" class="logo">
+        <div class="header-text">
+            <h1>IRONIC PEOPLE</h1>
+            <p>Ser uno mismo es el acto más revolucionario que puedes hacer</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#" id="verCarrito">🛒 Carrito (<span id="contador">0</span>)</a></li>
+        </ul>
+    </nav>
+    <section id="inicio" class="fade-in">
+        <h2>Bienvenido a IRONIC PEOPLE</h2>
+        <p>Expresa tu estilo con nuestra colección única.</p>
+        <button onclick="location.href='#catalogo'">Ver colección</button>
+    </section>
+
+    <section id="catalogo" class="scroll-effect">
+        <h2>Catálogo</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="GORRANEGRA.jpg" alt="Gorra Negra">
+                <p>Gorra Negra - Q250</p>
+                <button onclick="agregarAlCarrito('Gorra Negra', 250)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="GORRAROJA.jpg" alt="Gorra Roja">
+                <p>Gorra Roja - Q250</p>
+                <button onclick="agregarAlCarrito('Gorra Roja', 250)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="GORRAAMARILLA.jpg" alt="Gorra Amarilla">
+                <p>Gorra Amarilla - Q250</p>
+                <button onclick="agregarAlCarrito('Gorra Amarilla', 250)">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="carrito" class="oculto">
+        <h2>Carrito de compras</h2>
+        <ul id="listaCarrito"></ul>
+        <p>Total: Q<span id="total">0</span></p>
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </section>
+
+    <section id="contacto" class="fade-in">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna duda o sugerencia? ¡Escríbenos o síguenos en redes!</p>
+    
+        <form action="mailto:ottonajera.g@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/profile.php?id=100076920804215" target="_blank" title="Facebook">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/ironicpeopple/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 IRONIC PEOPLE - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
